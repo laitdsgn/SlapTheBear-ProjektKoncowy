@@ -33,6 +33,10 @@
     color: #000;
  }
 
+ ul li a:hover {
+   color: #0084ff;
+}
+
  .play_button {
     padding: 5px 20px 5px 20px;
     border-radius: 20px;
@@ -85,7 +89,10 @@
     height: 750px;
     display: block;
     margin: auto;
-    border: 2px solid white;
+    border-style: solid;
+    border-width: 3px;
+    border-color: #0084ff;
+    border-radius: 5px;
     background-color: black;
     overflow: hidden;
     background: url('../Graphics/gamebackground.jpg');
