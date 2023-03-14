@@ -4,28 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Slap the bear</title>
+    <title>Slap the bear - Game</title>
     <link rel="stylesheet" href="CSS/style.css">
 </head>
 <body>
+ 
     
-<header>
-<ul class="menu_links">
-<li><a href="index.html">Strona główna</a></li>
-<li><a href="">Opis Gry</a></li>
-<li><a href="">Kontakt</a></li>
-<button class="play_button"><a href="index.html">ZAGRAJ</a></button>
-</ul>
-</header>
+    <header>
+        <ul class="menu_links">
+        <img src="Graphics/gameicon.svg" alt="Ikona gry" width="30px">
+        <li><a href="index.html" target="_blank">Strona główna</a></li>
+        <li><a href="Desc.html" target="_blank">Opis Gry</a></li>
+        <li><a href="Contact.html" target="_blank">Kontakt</a></li>
+        <button class="play_button"><a href="index.html" target="_blank">ZAGRAJ</a></button>
+        </ul>
+    </header>
+
+<button id="start_button" onclick="startujgre()">START</button>
 
 <main>
-    <div class="game">
+    <div id="game">
         <p class="points">Punkty:</p>
         <p class="timeleft">Czas:</p>
 
+
+
         <div class="holes">
             <div class="hole">
-                <div class="bear"><img src="Graphics/bear.png" alt="dsda" width="100px"></div>
+                <div class="bear"><img src="Graphics/bear.png" alt="ddasdasdasass" width="100px"></div>
             </div>
         
             <div class="hole">
@@ -65,5 +71,7 @@
 
 <footer>Projekt Końcowy 2023 - Autor: laitdsgn/TR</footer>
 
+
+<script src="JS/script.js"></script>   
 </body>
 </html>

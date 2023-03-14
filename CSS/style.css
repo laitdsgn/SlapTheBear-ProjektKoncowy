@@ -8,8 +8,8 @@
  body {
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
-    /* background-image: url('../Graphics/gamebackground.jpg'); */
-    background-repeat: no-repeat;
+    /* background-image: url('../Graphics/gamebackground.jpg');
+    background-repeat: no-repeat; */
  }
  
  header {
@@ -60,8 +60,8 @@
     height: 75px;
     width: 85px;
     border-radius: 50%;
-    background-color: #20150b;
-    box-shadow: 0px -5px #301f11;
+    background-color: #20150b ;
+    box-shadow: 0px -6px #312011;
     overflow: hidden;
  }
 
@@ -81,9 +81,15 @@
     font-size: 30px;
     position: relative;
     top: 100px;
+    text-shadow: 1px 1px #ffffff;
  }
 
- .game {
+
+ .points::selection, .timeleft::selection {
+   background-color: unset;
+}
+
+ #game {
     position: relative;
     top: 20px;
     width: 1300px;
@@ -92,13 +98,15 @@
     margin: auto;
     border-style: solid;
     border-width: 3px;
-    border-color: #0084ff;
+    border-color: #0069cc;
     border-radius: 5px;
     background-color: black;
     overflow: hidden;
     background: url('../Graphics/gamebackground.jpg');
     background-size: cover;
     background-repeat: no-repeat;
+    filter:blur(3px);
+    z-index: -1;
  }
 
  footer {
@@ -116,9 +124,30 @@
    
    width: 100%;
    position: absolute;
-   left: -10%;
+   left: -8%;
    bottom: -40px;
  }
+
+ #start_button {
+   padding: 10px 40px 10px 40px;
+   border-radius: 15px;
+   border-style: solid;
+   border-width: 2px;
+   border-color: #006ace;
+   background-color: #0084ff;
+   color: #ffffff;
+   display: block;
+   margin: auto;
+   position: relative;
+   top: 400px;
+   z-index: 10;
+   
+}
+
+#start_button:hover {
+   background-color: #006ace;
+}
+
 
 
 
