@@ -74,7 +74,7 @@
     z-index: 2;
  }
 
- #points, .points, .timeleft {
+ #points, .points, .timeleft, #timeleft {
     font-weight: 800; 
     display: flex;
     justify-content: center;
@@ -85,23 +85,9 @@
 
  }
 
- #points {
-   position: relative;
-   top: 60px;
-   left: 85px;
 
 
- }
-
- .timeleft {
-   position: relative;
-   left: 15px;
-   top: 70px;
-
-
- }
-
- #points::selection, .timeleft::selection {
+ #points::selection, #timeleft::selection,  .points::selection, .timeleft::selection {
    background-color: unset;
 }
 

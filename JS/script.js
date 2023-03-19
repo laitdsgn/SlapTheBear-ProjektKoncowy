@@ -25,10 +25,10 @@ setInterval(() => {
     // usuwanie animacji wyskakiwania
     setTimeout(() => {
         losowymis.classList.remove('wyskakiwanie'); 
-    }, 750);
+    }, 850);
 
 
-}, 800);
+}, 900);
 
 
 
