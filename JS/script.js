@@ -1,6 +1,7 @@
 let dziury = document.querySelectorAll('.hole')
 let misie = document.querySelectorAll('.bear')
-let punkty = 0
+let punkty = document.getElementById('points')
+let punktywartosc = 0
 
 const startbutton = document.getElementById('start_button')
 
@@ -10,6 +11,8 @@ startbutton.addEventListener('click', function() {
 
     document.getElementById("game").style.filter = "blur(0px)"
     document.getElementById("start_button").style.visibility = "hidden"
+
+
 
 
 setInterval(() => {
@@ -29,8 +32,31 @@ setInterval(() => {
 
 
 
+    misie.forEach(mis => mis.addEventListener('click', function() {
+        punktywartosc +=  10;
+        punkty.innerText = punktywartosc;
+    }));
+
 
 });
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
