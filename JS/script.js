@@ -46,12 +46,12 @@ const minutnik = setInterval(() => {
     let sekundy = czas % 60;
 
     // dodajemy 0 jeżeli minuty są mniejsze od 10
-    if (minuty < 10) {
+    if (minuty < 10 && minuty > 0) {
         minuty = "0" + minuty;
       }
 
     // dodajemy 0 jeżeli sekundy są mniejsze od 10
-      if (sekundy < 10) {
+      if (sekundy < 10 && sekundy > 0) {
         sekundy = "0" + sekundy;
       }
 
