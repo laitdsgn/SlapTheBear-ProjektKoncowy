@@ -3,7 +3,7 @@ let misie = document.querySelectorAll('.bear')
 let punkty = document.getElementById('points')
 let punktywartosc = 0
 let czashtml = document.getElementById('timeleft')
-let czas = 30 // początkowy czas jaki gracz otrzymuje. (Za każde trafienie dostaje 2 sekundy a za pudło -3)
+let czas = 30 // początkowy czas jaki gracz otrzymuje. (Za każde trafienie dostaje 2 sekundy a za pudło -4)
 
 
 const startbutton = document.getElementById('start_button')
