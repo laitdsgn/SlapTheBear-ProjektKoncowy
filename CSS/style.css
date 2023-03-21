@@ -36,8 +36,8 @@
 }
 
  .play_button {
-    padding: 5px 20px 5px 20px;
-    border-radius: 20px;
+    padding: 8px 25px 8px 25px;
+    border-radius: 15px;
     border: 0;
     background-color: #0084ff;
     color: #ffffff;
@@ -151,7 +151,7 @@
 }
 
 
-@keyframes wyskakiwanie {
+@keyframes wyskakiwanie  {
    from {
       bottom: -150px;
    }
@@ -166,7 +166,6 @@
    animation-iteration-count: 2;
    animation-direction: alternate;
 } 
-
 
 
 

@@ -4,18 +4,27 @@ let punkty = document.getElementById('points')
 let punktywartosc = 0
 let czashtml = document.getElementById('timeleft')
 let czas = 30 // początkowy czas jaki gracz otrzymuje. (Za każde trafienie dostaje 2 sekundy a za pudło -4)
+let czasanimacji = 500
+let klikniecia = 0
 
 
 const startbutton = document.getElementById('start_button')
 
 
 
-startbutton.addEventListener('click', function() {
+startbutton.addEventListener('click', function startgry() {
 
     document.getElementById("game").style.filter = "blur(0px)"
     document.getElementById("start_button").style.visibility = "hidden"
 
 
+    // const misiefaster = setInterval(() => {
+
+    //     console.log(czasInterval, czasKlasa);
+    //     czasInterval += -10
+    //     czasKlasa += - 10
+    
+    // }, 500);
 
 
 const misierandom = setInterval(() => {
@@ -28,13 +37,13 @@ const misierandom = setInterval(() => {
     // usuwanie animacji wyskakiwania
     setTimeout(() => {
         losowymis.classList.remove('wyskakiwanie'); 
-    }, 950);
-
-
+    }, 900);
 
 
 
 }, 1000);
+
+
 
 
 
@@ -46,36 +55,46 @@ const minutnik = setInterval(() => {
     let sekundy = czas % 60;
 
     // dodajemy 0 jeżeli minuty są mniejsze od 10
-    if (minuty < 10 && minuty > 0) {
+    if (minuty < 10 && minuty >= 0) {
         minuty = "0" + minuty;
       }
 
     // dodajemy 0 jeżeli sekundy są mniejsze od 10
-      if (sekundy < 10 && sekundy > 0) {
+      if (sekundy < 10 && sekundy >= 0) {
         sekundy = "0" + sekundy;
       }
 
     czashtml.innerText = minuty + ":" + sekundy
 
 
-
-
 }, 1000);
-
-
 
 
     misie.forEach(mis => mis.addEventListener('click', function() {
         punktywartosc += 20 // 10 punktów za trafienie (20 - 10 = 10)
         punkty.innerText = punktywartosc 
         czas += 6 
+
+        klikniecia++; 
+
+        if (klikniecia % 10 === 0) {  // co dziesiąte kliknięcie animation-duration zmniejszamy o 10 ms
+            czasanimacji -= 10; 
+        }
+    
+        mis.style.animationDuration = czasanimacji + "ms"
+
     }));
 
+
     dziury.forEach(dziura => dziura.addEventListener('click', function() {
-        punktywartosc += -10  
+        punktywartosc -= 10  
         punkty.innerText = punktywartosc
-        czas += -3
+        czas -= 3
     }));
+
+
+
+
 
 });
 
