@@ -6,43 +6,36 @@ let czashtml = document.getElementById('timeleft')
 let czas = 30 // początkowy czas jaki gracz otrzymuje. (Za każde trafienie dostaje 2 sekundy a za pudło -4)
 let czasanimacji = 500
 let klikniecia = 0
-
+let minuty = Math.floor(czas / 60);
+let sekundy = czas % 60;
 
 const startbutton = document.getElementById('start_button')
 
 
 
-startbutton.addEventListener('click', function startgry() {
+function startgry() {
 
     document.getElementById("game").style.filter = "blur(0px)"
     document.getElementById("start_button").style.visibility = "hidden"
 
 
-    // const misiefaster = setInterval(() => {
-
-    //     console.log(czasInterval, czasKlasa);
-    //     czasInterval += -10
-    //     czasKlasa += - 10
-    
-    // }, 500);
-
 
 const misierandom = setInterval(() => {
 
-    // dodawanie animacji wyskakiwania 
+
     const x = Math.floor(Math.random() * (dziury.length));
     const losowymis = misie[x]
+        // dodawanie animacji wyskakiwania 
     losowymis.classList.add('wyskakiwanie')
 
     // usuwanie animacji wyskakiwania
     setTimeout(() => {
         losowymis.classList.remove('wyskakiwanie'); 
-    }, 900);
+    }, 950);
 
 
 
 }, 1000);
-
 
 
 
@@ -66,6 +59,16 @@ const minutnik = setInterval(() => {
 
     czashtml.innerText = minuty + ":" + sekundy
 
+    if (czas < 0) {
+        clearInterval(minutnik)
+        clearInterval(misierandom)
+        document.getElementById("przegrana").innerHTML = `<h1 id="przegrana">Twój czas się skończył! <br> Twój wynik: ${punktywartosc} </h1>`;
+        document.getElementById("endingscreen").style.display = "block"
+        document.getElementById("game").style.display = "none"
+        czashtml.innerText = "0"
+        punkty.innerText = "0"
+    }
+
 
 }, 1000);
 
@@ -77,7 +80,7 @@ const minutnik = setInterval(() => {
 
         klikniecia++; 
 
-        if (klikniecia % 10 === 0) {  // co dziesiąte kliknięcie animation-duration zmniejszamy o 10 ms
+        if (klikniecia % 5 === 0) {  // co piate kliknięcie animation-duration zmniejszamy o 10 ms
             czasanimacji -= 10; 
         }
     
@@ -90,18 +93,19 @@ const minutnik = setInterval(() => {
         punktywartosc -= 10  
         punkty.innerText = punktywartosc
         czas -= 3
+
+        if (punktywartosc < 0) {
+            clearInterval(minutnik)
+            clearInterval(misierandom)
+            document.getElementById("przegrana").innerHTML = `<h1 id="przegrana">Twoje punkty się skończyły! <br> Twój wynik: ${punktywartosc + 10}</h1>`
+            document.getElementById("endingscreen").style.display = "block"
+            document.getElementById("game").style.display = "none"
+            punkty.innerText = "0"
+            czashtml.innerText = "0"
+        }
+
     }));
 
-
-
-
-
-});
-
-
-
-
-
-
+};
 
 

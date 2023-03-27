@@ -16,19 +16,26 @@
         <li><a href="index.html" target="_blank">Strona główna</a></li>
         <li><a href="Desc.html" target="_blank">Opis Gry</a></li>
         <li><a href="Contact.html" target="_blank">Kontakt</a></li>
-        <button class="play_button"><a href="index.html" target="_blank">ZAGRAJ</a></button>
+        <button class="play_button"><a href="index.html">ZAGRAJ</a></button>
         </ul>
     </header>
 
-<button id="start_button">START</button>
+<button id="start_button" onclick="startgry()">START</button>
 
 <main>
+    
+    <div id="endingscreen">
+
+        <h1 id="przegrana"></h1>
+
+    </div>
+
     <div id="game">
 
  
         <p class="points">Punkty:<section id="points">0</section></p>
         
-        <p class="timeleft">Czas:<div id="timeleft"></div> </p>
+        <p class="timeleft">Czas:<section id="timeleft"></section> </p>
 
 
 
