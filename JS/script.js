@@ -3,11 +3,28 @@ let misie = document.querySelectorAll('.bear')
 let punkty = document.getElementById('points')
 let punktywartosc = 0
 let czashtml = document.getElementById('timeleft')
-let czas = 30 // początkowy czas jaki gracz otrzymuje. (Za każde trafienie dostaje 2 sekundy a za pudło -4)
+let czas = 15 // początkowy czas jaki gracz otrzymuje. (Za każde trafienie dostaje 2 sekundy a za pudło -4)
 let czasanimacji = 500
 let klikniecia = 0
 let minuty = Math.floor(czas / 60);
 let sekundy = czas % 60;
+let hammer = document.getElementById("hammer")
+
+
+
+document.addEventListener('mousemove', hammerposition)
+
+function hammerposition(e) {
+    let x = e.clientX
+    let y = e.clientY
+    hammer.style.top = y + "px";
+    hammer.style.left = x + "px";
+        
+
+}
+
+
+
 
 const startbutton = document.getElementById('start_button')
 
@@ -31,11 +48,11 @@ const misierandom = setInterval(() => {
     // usuwanie animacji wyskakiwania
     setTimeout(() => {
         losowymis.classList.remove('wyskakiwanie'); 
-    }, 950);
+    }, 1050);
 
 
 
-}, 1000);
+}, 1100);
 
 
 
@@ -106,6 +123,14 @@ const minutnik = setInterval(() => {
 
     }));
 
+
+    
+
+
+
+
 };
+
+
 
 

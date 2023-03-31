@@ -3,11 +3,13 @@
  * {
     padding: 0;
     margin: 0;
+     cursor: none; /* To jest po to aby zwykły kursor nie był widoczny na stronie  */
  }
  
  body {
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
+    overflow: hidden;
  }
  
  header {
@@ -61,7 +63,7 @@
     background-color: #20150b ;
     box-shadow: 0px -6px #312011;
     overflow: hidden;
-    z-index: 2;
+    z-index: 5;
  }
 
  .holes {
@@ -71,7 +73,7 @@
     position: absolute;
     top: 55%;
     left: 31%;
-    z-index: 2;
+    z-index: 5;
  }
 
  #points, .points, .timeleft, #timeleft {
@@ -143,7 +145,7 @@
    margin: auto;
    position: relative;
    top: 400px;
-   z-index: 10;
+   z-index: 6;
    
 }
 
@@ -163,7 +165,7 @@
 
 .wyskakiwanie {
    animation-name: wyskakiwanie;
-   animation-duration: 0.55s;
+   animation-duration: 0.6s;
    animation-iteration-count: 2;
    animation-direction: alternate;
 } 
@@ -194,8 +196,68 @@
    display: block;
    margin: auto;
    display: none;
-   z-index: 2;
+   z-index: 1;
 }
 
+
+.game_description {
+   display: block;
+   margin: auto;
+   font-weight: 600;
+   font-size: 22px;
+   width: 750px;
+}
+
+
+.maindesc {
+   text-align: center;
+   position: relative;
+   top: 50px;
+}
+
+
+.game_description_title {
+   font-weight: 700;
+   font-size: 50px;
+   text-decoration: underline;
+}
+
+
+.game_description_title::selection, .game_description::selection {
+   background-color: #25a4d6ab;
+}
+
+
+
+.tutorial {
+  width: 800px;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 5px;
+  border-color: #000;
+  margin: 20px;
+}
+
+.bodydesc {
+   box-sizing: border-box;
+   font-family: 'Open Sans', sans-serif;
+   background-image: url('../Graphics/gamebackground.jpg');
+   background-repeat: no-repeat;
+   background-size: 100%;
+}
+
+
+
+#hammer {
+   transform: translateX(50px);
+   transform: translateY(-30px);
+   width: 80px;
+   height: 80px;
+   pointer-events: none;
+   position: absolute;
+   background-image: url('../Graphics/hammer.png');
+   background-size: 100% 100%;
+   z-index: 7;
+}
 
 
