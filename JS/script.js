@@ -4,7 +4,7 @@ let punkty = document.getElementById('points')
 let punktywartosc = 0
 let czashtml = document.getElementById('timeleft')
 let czas = 15 // początkowy czas jaki gracz otrzymuje. (Za każde trafienie dostaje 2 sekundy a za pudło -4)
-let czasanimacji = 500
+let czasanimacji = 600
 let klikniecia = 0
 let minuty = Math.floor(czas / 60);
 let sekundy = czas % 60;
@@ -13,20 +13,30 @@ let hammer = document.getElementById("hammer")
 
 
 document.addEventListener('mousemove', hammerposition)
+document.addEventListener('mousedown', hammerrotate)
+document.addEventListener('mouseup', hammerderotate)
 
 function hammerposition(e) {
-    let x = e.clientX
-    let y = e.clientY
+    let x = e.pageX
+    let y = e.pageY
     hammer.style.top = y + "px";
     hammer.style.left = x + "px";
-        
+    
+}
 
+
+function hammerrotate() {
+    hammer.style.animation = "uderzenie 0.1s 2 alternate"
+
+}
+
+function hammerderotate() {
+    hammer.style.animation = "none"
 }
 
 
 
 
-const startbutton = document.getElementById('start_button')
 
 
 
@@ -48,11 +58,11 @@ const misierandom = setInterval(() => {
     // usuwanie animacji wyskakiwania
     setTimeout(() => {
         losowymis.classList.remove('wyskakiwanie'); 
-    }, 1050);
+    }, 1150);
 
 
 
-}, 1100);
+}, 1200);
 
 
 
