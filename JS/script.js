@@ -17,10 +17,11 @@ document.addEventListener('mousedown', hammerrotate)
 document.addEventListener('mouseup', hammerderotate)
 
 function hammerposition(e) {
+
     let x = e.pageX
     let y = e.pageY
-    hammer.style.top = y + "px";
-    hammer.style.left = x + "px";
+    hammer.style.top = y + -25 + "px";
+    hammer.style.left = x + -30 + "px";
     
 }
 
@@ -33,7 +34,6 @@ function hammerrotate() {
 function hammerderotate() {
     hammer.style.animation = "none"
 }
-
 
 
 

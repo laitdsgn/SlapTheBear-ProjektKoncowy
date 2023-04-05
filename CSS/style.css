@@ -3,7 +3,7 @@
  * {
     padding: 0;
     margin: 0;
-    cursor: none; /* To jest po to aby zwykły kursor nie był widoczny na stronie */
+    cursor: none;
  }
  
  body {
@@ -11,6 +11,7 @@
     font-family: 'Open Sans', sans-serif;
     background-color: #f7f7f7;
     overflow: hidden;
+
  }
  
  header {
@@ -115,7 +116,6 @@
     overflow: hidden;
     background: url('../Graphics/gamebackground.jpg');
     background-size: cover;
-
     background-repeat: no-repeat;
     filter:blur(3px); 
     z-index: 1;
@@ -219,8 +219,6 @@
 }
 
 #hammer {
-   transform: translateX(50px);
-   transform: translateY(-30px);
    width: 80px;
    height: 80px;
    pointer-events: none;
