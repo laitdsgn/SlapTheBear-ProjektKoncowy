@@ -136,9 +136,6 @@ const minutnik = setInterval(() => {
 
     
 
-
-
-
 };
 
 

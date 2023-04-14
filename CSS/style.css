@@ -10,7 +10,6 @@
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
     background-color: #f7f7f7;
-    overflow: hidden;
 
  }
  
@@ -242,18 +241,100 @@
    }
 
    #game {
-    width: 800px;
-    height: 750px;
+    width: 1000px;
+    height: 700px;
     background-size: cover;
-    background-position-x: -250px ;
+    background-position-x: -100px ;
    }
 
    .holes {
       position: absolute;
-      left: 20%;
+      left: 25%;
 
    }
 
+
+}
+
+@media only screen and (max-width: 1000px) {
+
+   .menu_links {
+      font-weight: 700;
+      font-size: 14px;
+   }
+
+   .ikona_gry {
+      display: none;
+   }
+
+   #game {
+    width: 800px;
+    height: 700px;
+    background-size: cover;
+    background-position-x: -220px ;
+   }
+
+   .holes {
+      position: absolute;
+      left: 18%;
+
+   }
+
+
+}
+
+@media only screen and (max-width: 800px) {
+
+   .menu_links {
+      font-weight: 700;
+      font-size: 14px;
+   }
+
+   .ikona_gry {
+      display: none;
+   }
+
+   #game {
+    width: 600px;
+    height: 650px;
+    background-size: cover;
+    background-position-x: -270px ;
+   }
+
+   .holes {
+      position: absolute;
+      left: 10%;
+   }
+
+
+}
+
+@media only screen and (max-width: 600px) {
+
+   .menu_links {
+      font-weight: 700;
+      font-size: 14px;
+   }
+
+   .ikona_gry {
+      display: none;
+   }
+
+   #game {
+    width: 400px;
+    height: 600px;
+    background-size: cover;
+    background-position-x: -320px ;
+   }
+
+   .holes {
+      position: absolute;
+      left: 10%;
+      display: grid;
+      grid-template-columns: repeat(3, 100px);
+      grid-gap: 15px;
+      position: absolute;
+   }
 
 }
 
