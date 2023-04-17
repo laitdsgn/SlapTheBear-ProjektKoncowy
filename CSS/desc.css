@@ -9,8 +9,7 @@
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
     background-image: url('../Graphics/gamebackground.jpg');
-    background-repeat: no-repeat;
-    background-size: 100%;
+    background-repeat: repeat;
  }
  
  header {
@@ -75,7 +74,7 @@ ul li .buttonlink:hover {
     margin: auto;
     font-weight: 600;
     font-size: 22px;
-    width: 750px;
+    width: 820px;
  }
 
 
@@ -104,4 +103,138 @@ ul li .buttonlink:hover {
    border-color: #000;
    margin: 20px;
  }
+
+
  
+ @media only screen and (max-width: 1300px) {
+
+   .menu_links {
+      font-weight: 700;
+      font-size: 14px;
+   }
+
+
+   .game_description_title {
+      font-weight: 800;
+      font-size: 45px;
+      text-decoration: underline;
+   }
+
+   .game_description {
+      display: block;
+      margin: auto;
+      font-weight: 700;
+      font-size: 19px;
+      width: 750px;
+   }
+
+}
+
+@media only screen and (max-width: 1000px) {
+
+   .menu_links {
+      font-weight: 700;
+      font-size: 14px;
+   }
+
+   .ikona_gry {
+      display: none;
+   }
+
+   .game_description_title {
+      font-weight: 800;
+      font-size: 45px;
+      text-decoration: underline;
+   }
+
+   .game_description {
+      display: block;
+      margin: auto;
+      font-weight: 700;
+      font-size: 17px;
+      width: 650px;
+   }
+
+   .tutorial {
+      width: 600px;
+      border-style: solid;
+      border-width: 2px;
+      border-radius: 5px;
+      border-color: #000;
+      margin: 20px;
+    }
+
+}
+
+@media only screen and (max-width: 800px) {
+
+   .menu_links {
+      font-weight: 700;
+      font-size: 14px;
+   }
+
+   .ikona_gry {
+      display: none;
+   }
+
+   .game_description_title {
+      font-weight: 800;
+      font-size: 45px;
+      text-decoration: underline;
+   }
+
+   .game_description {
+      display: block;
+      margin: auto;
+      font-weight: 700;
+      font-size: 17px;
+      width: 590px;
+   }
+
+   .tutorial {
+      width: 500px;
+      border-style: solid;
+      border-width: 2px;
+      border-radius: 5px;
+      border-color: #000;
+      margin: 20px;
+    }
+
+
+}
+
+@media only screen and (max-width: 600px) {
+
+   .menu_links {
+      font-weight: 700;
+      font-size: 14px;
+   }
+
+   .ikona_gry {
+      display: none;
+   }
+
+   .game_description_title {
+      font-weight: 800;
+      font-size: 45px;
+      text-decoration: underline;
+   }
+
+   .game_description {
+      display: block;
+      margin: auto;
+      font-weight: 700;
+      font-size: 17px;
+      width: 450px;
+   }
+
+   .tutorial {
+      width: 450px;
+      border-style: solid;
+      border-width: 2px;
+      border-radius: 5px;
+      border-color: #000;
+      margin: 20px;
+    }
+
+}
