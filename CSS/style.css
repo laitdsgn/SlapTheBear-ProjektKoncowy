@@ -10,7 +10,7 @@
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
     background-color: #f7f7f7;
-
+   overflow: hidden;
  }
  
  header {
@@ -229,7 +229,7 @@
 
 
 
-@media only screen and (max-width: 1300px) {
+@media only screen and (max-width: 1400px) {
 
    .menu_links {
       font-weight: 700;
@@ -253,7 +253,7 @@
 
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1100px) {
 
    .menu_links {
       font-weight: 700;
@@ -280,7 +280,7 @@
 
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 900px) {
 
    .menu_links {
       font-weight: 700;
@@ -306,7 +306,7 @@
 
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
 
    .menu_links {
       font-weight: 700;

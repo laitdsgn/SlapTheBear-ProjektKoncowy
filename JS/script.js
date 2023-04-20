@@ -9,6 +9,7 @@ let klikniecia = 0
 let minuty = Math.floor(czas / 60);
 let sekundy = czas % 60;
 let hammer = document.getElementById("hammer")
+let interval = 1200
 
 
 
@@ -58,11 +59,11 @@ const misierandom = setInterval(() => {
     // usuwanie animacji wyskakiwania
     setTimeout(() => {
         losowymis.classList.remove('wyskakiwanie'); 
-    }, 1150);
+    }, interval - 100);
 
 
 
-}, 1200);
+}, interval);
 
 
 
@@ -109,6 +110,8 @@ const minutnik = setInterval(() => {
 
         if (klikniecia % 5 === 0) {  // co piate kliknięcie animation-duration zmniejszamy o 10 ms
             czasanimacji -= 10; 
+            interval -= 10
+            console.log(interval);
         }
     
         mis.style.animationDuration = czasanimacji + "ms"
