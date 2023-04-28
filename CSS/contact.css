@@ -8,6 +8,8 @@
  body {
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
+    background-color: #a7d4ff;
+    text-align: center;
  }
  
  header {
@@ -40,8 +42,8 @@ ul li .buttonlink:hover {
 }
 
  .play_button {
-    padding: 8px 25px 8px 25px;
-    border-radius: 15px;
+   padding: 10px 32px 10px 32px;
+    border-radius: 10px;
     border: 0;
     background-color: #0084ff;
     color: #ffffff;
@@ -66,3 +68,16 @@ ul li .buttonlink:hover {
     font-weight: 400;
     z-index: 2;
   }
+
+  .kontakt {
+      position: relative;
+      top: 200px;
+  }
+
+  .Dane li {
+   list-style-type: none;
+   margin: 15px;
+
+
+  }
+

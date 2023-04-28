@@ -1,5 +1,19 @@
  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
  
+ @keyframes przycisk {
+   from {
+      background-color: #0084ff;
+
+   }
+
+   to {
+      background-color: #004c94;
+
+
+   }
+ }
+
+
  * {
     padding: 0;
     margin: 0;
@@ -44,8 +58,8 @@
  }
 
  .play_button {
-    padding: 8px 25px 8px 25px;
-    border-radius: 15px;
+    padding: 10px 32px 10px 32px;
+    border-radius: 10px;
     border: 0;
     background-color: #0084ff;
     color: #ffffff;
@@ -145,7 +159,7 @@
    border-radius: 15px;
    border-style: solid;
    border-width: 2px;
-   border-color: #006ace;
+   border-color: #0065c4;
    background-color: #0084ff;
    color: #ffffff;
    display: block;
@@ -157,7 +171,8 @@
 }
 
 #start_button:hover {
-   background-color: #006ace;
+   background-color: #0065c4;
+   animation: przycisk 0.8s infinite alternate-reverse;
 }
 
 
@@ -264,6 +279,7 @@
       display: none;
    }
 
+
    #game {
     width: 800px;
     height: 700px;
@@ -289,6 +305,10 @@
 
    .ikona_gry {
       display: none;
+   }
+
+   #endingscreen {
+      width: 500px;
    }
 
    #game {
@@ -322,6 +342,10 @@
     height: 600px;
     background-size: cover;
     background-position-x: -320px ;
+   }
+
+   #endingscreen {
+      width: 350px;
    }
 
    .holes {

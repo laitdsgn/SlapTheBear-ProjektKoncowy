@@ -42,8 +42,8 @@ ul li .buttonlink:hover {
  }
 
  .play_button {
-    padding: 8px 25px 8px 25px;
-    border-radius: 15px;
+   padding: 10px 32px 10px 32px;
+    border-radius: 10px;
     border: 0;
     background-color: #0084ff;
     color: #ffffff;
@@ -78,7 +78,7 @@ ul li .buttonlink:hover {
  }
 
 
- main {
+ .desc {
     text-align: center;
     position: relative;
     top: 20px;
