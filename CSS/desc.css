@@ -238,3 +238,81 @@ ul li .buttonlink:hover {
     }
 
 }
+
+@media only screen and (max-width: 500px) {
+
+   .menu_links {
+      font-weight: 700;
+      font-size: 13px;
+   }
+
+   .ikona_gry {
+      display: none;
+   }
+
+   .game_description_title {
+      font-weight: 800;
+      font-size: 42px;
+      text-decoration: underline;
+   }
+
+   .game_description {
+      display: block;
+      margin: auto;
+      font-weight: 700;
+      font-size: 15px;
+      width: 350px;
+   }
+
+   .tutorial {
+      width: 350px;
+      border-style: solid;
+      border-width: 2px;
+      border-radius: 5px;
+      border-color: #000;
+      margin: 20px;
+    }
+
+}
+
+@media only screen and (max-width: 380px) {
+
+
+   .play_button {
+      padding: 8px 24px 8px 24px;
+   }
+
+
+   .menu_links {
+      font-weight: 700;
+      font-size: 11px;
+   }
+
+   .ikona_gry {
+      display: none;
+   }
+
+   .game_description_title {
+      font-weight: 800;
+      font-size: 40px;
+      text-decoration: underline;
+   }
+
+   .game_description {
+      display: block;
+      margin: auto;
+      font-weight: 700;
+      font-size: 13px;
+      width: 250px;
+   }
+
+   .tutorial {
+      width: 250px;
+      border-style: solid;
+      border-width: 2px;
+      border-radius: 5px;
+      border-color: #000;
+      margin: 20px;
+    }
+
+}

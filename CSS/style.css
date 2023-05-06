@@ -359,6 +359,43 @@
 
 }
 
+@media only screen and (max-width: 450px) {
+
+   .menu_links {
+      font-weight: 700;
+      font-size: 11px;
+   }
+
+   .play_button {
+      padding: 8px 24px 8px 24px;
+   }
+
+   .ikona_gry {
+      display: none;
+   }
+
+   #endingscreen {
+      width: 300px;
+   }
+
+
+   .holes {
+      position: absolute;
+      left: 7%;
+      display: grid;
+      grid-template-columns: repeat(3, 100px);
+      grid-gap: 15px;
+      position: absolute;
+   }
+
+   #game {
+      width: 350px;
+      height: 600px;
+      background-size: cover;
+      background-position-x: -350px ;
+     }
+}
+
 
 
 

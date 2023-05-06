@@ -12,11 +12,11 @@ let hammer = document.getElementById("hammer")
 let interval = 1200
 
 
-
 document.addEventListener('mousemove', hammerposition)
 document.addEventListener('mousedown', hammerrotate)
 document.addEventListener('mouseup', hammerderotate)
 
+// ustawianie pozycji młotka
 function hammerposition(e) {
 
     let x = e.pageX
@@ -26,12 +26,13 @@ function hammerposition(e) {
     
 }
 
-
+// dodawanie animacji uderzenia
 function hammerrotate() {
     hammer.style.animation = "uderzenie 0.1s 2 alternate"
 
 }
 
+// usuwanie animacji uderzenia
 function hammerderotate() {
     hammer.style.animation = "none"
 }
@@ -40,7 +41,7 @@ function hammerderotate() {
 
 
 
-
+// funkcja startująca grę
 function startgry() {
 
     document.getElementById("game").style.filter = "blur(0px)"
@@ -108,6 +109,7 @@ const minutnik = setInterval(() => {
 
         klikniecia++; 
 
+        
         if (klikniecia % 5 === 0) {  // co piate kliknięcie animation-duration zmniejszamy o 10 ms
             czasanimacji -= 10; 
             interval -= 10
@@ -124,6 +126,7 @@ const minutnik = setInterval(() => {
         punkty.innerText = punktywartosc
         czas -= 3
 
+    // jeżeli punkty są mniejsze od 0 to wyświetlamy przegraną
         if (punktywartosc < 0) {
             clearInterval(minutnik)
             clearInterval(misierandom)
