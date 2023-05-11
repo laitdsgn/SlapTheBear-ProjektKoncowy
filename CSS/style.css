@@ -1,17 +1,6 @@
  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
  
- @keyframes przycisk {
-   from {
-      background-color: #0084ff;
 
-   }
-
-   to {
-      background-color: #004c94;
-
-
-   }
- }
 
 
  * {
@@ -116,7 +105,7 @@
 
  #game {
     position: relative;
-    top: 20px;
+    top: -30px;
     width: 1300px;
     height: 750px;
     display: block;
@@ -165,15 +154,70 @@
    display: block;
    margin: auto;
    position: relative;
-   top: 400px;
+   top: 410px;
    z-index: 6;
    
 }
 
+
+#restart_button {
+   padding: 10px 40px 10px 40px;
+   border-radius: 15px;
+   border-style: solid;
+   border-width: 2px;
+   border-color: #c40000;
+   background-color: #ff0000;
+   color: #ffffff;
+   display: block;
+   margin: auto;
+   position: relative;
+   top: 400px;
+   z-index: 6;
+   visibility: hidden;
+
+}
+
+.buttons a {
+   text-decoration: none;
+
+}
+
 #start_button:hover {
-   background-color: #0065c4;
    animation: przycisk 0.8s infinite alternate-reverse;
 }
+
+#restart_button:hover {
+   animation: przycisk2 0.8s infinite alternate-reverse;
+
+
+}
+
+@keyframes przycisk {
+   from {
+      background-color: #0084ff;
+
+   }
+
+   to {
+      background-color: #004c94;
+
+
+   }
+ }
+
+
+ @keyframes przycisk2 {
+   from {
+      background-color: #ff0000;
+
+   }
+
+   to {
+      background-color: #c40000;
+
+
+   }
+ }
 
 
 @keyframes wyskakiwanie  {
@@ -206,7 +250,7 @@
 #przegrana {
    color: #1a1109;
    position: relative;
-   top: 120px;
+   top: 110px;
    font-size: 40px;
    text-shadow: 0px 2px 2px #5c3519 ;
    text-align: center;
@@ -320,7 +364,7 @@
 
    .holes {
       position: absolute;
-      left: 10%;
+      left: 8%;
    }
 
 
@@ -381,7 +425,7 @@
 
    .holes {
       position: absolute;
-      left: 7%;
+      left: 6%;
       display: grid;
       grid-template-columns: repeat(3, 100px);
       grid-gap: 15px;

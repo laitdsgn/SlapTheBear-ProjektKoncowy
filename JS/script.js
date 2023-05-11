@@ -28,7 +28,7 @@ function hammerposition(e) {
 
 // dodawanie animacji uderzenia
 function hammerrotate() {
-    hammer.style.animation = "uderzenie 0.1s 2 alternate"
+    hammer.style.animation = "uderzenie 0.07s 2 alternate"
 
 }
 
@@ -89,6 +89,7 @@ const minutnik = setInterval(() => {
     czashtml.innerText = minuty + ":" + sekundy
 
     if (czas < 0) {
+        document.getElementById("restart_button").style.visibility = "visible"
         clearInterval(minutnik)
         clearInterval(misierandom)
         document.getElementById("przegrana").innerHTML = `<h1 id="przegrana">Twój czas się skończył! <br> Twój wynik: ${punktywartosc} </h1>`;
@@ -128,6 +129,7 @@ const minutnik = setInterval(() => {
 
     // jeżeli punkty są mniejsze od 0 to wyświetlamy przegraną
         if (punktywartosc < 0) {
+            document.getElementById("restart_button").style.visibility = "visible"
             clearInterval(minutnik)
             clearInterval(misierandom)
             document.getElementById("przegrana").innerHTML = `<h1 id="przegrana">Twoje punkty się skończyły! <br> Twój wynik: ${punktywartosc + 10}</h1>`
