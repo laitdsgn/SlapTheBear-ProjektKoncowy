@@ -105,7 +105,7 @@
 
  #game {
     position: relative;
-    top: -30px;
+    top: -40px;
     width: 1300px;
     height: 750px;
     display: block;
@@ -342,6 +342,11 @@
 
 @media only screen and (max-width: 900px) {
 
+
+   #restart_button {
+      top: 450px;
+   }
+
    .menu_links {
       font-weight: 700;
       font-size: 14px;
@@ -371,6 +376,10 @@
 }
 
 @media only screen and (max-width: 700px) {
+
+   #restart_button {
+      top: 460px;
+   }
 
    .menu_links {
       font-weight: 700;
@@ -404,6 +413,11 @@
 }
 
 @media only screen and (max-width: 450px) {
+
+
+   #restart_button {
+      top: 460px;
+   }
 
    .menu_links {
       font-weight: 700;
