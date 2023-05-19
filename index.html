@@ -16,7 +16,7 @@
 
     <header>
         <ul class="menu_links">
-        <li><a href="index.html"><img src="Graphics/gameicon.svg" alt="Ikona gry" width="30px" class="ikona_gry"></li></a>
+        <li><a href="index.html"><img src="Graphics/gameicon.svg" alt="Ikona gry" width="30px" class="ikona_gry"></a></li>
         <li><a href="index.html" >Strona główna</a></li>
         <li><a href="Desc.html" target="_blank">Opis Gry</a></li>
         <li><a href="Contact.html" target="_blank">Kontakt</a></li>
@@ -24,28 +24,27 @@
         </ul>
     </header>
 
+    <div class="netgraph">
+        <p id="fps">FPS: </p>
+    </div>
+
 <div class="buttons">
 <button id="start_button" onclick="startgry()">START</button>
 <a href="index.html" ><button id="restart_button" type="button">RESTART</button></a>
 </div>
 
-
-
     
+        <h2 id="error">Twoje urządzenie jest niekompatybilne</h2>
+    
+
     <div id="endingscreen">
-
         <h1 id="przegrana"></h1>
-
     </div>
 
     <div id="game">
-
-
- 
         <p class="points">Punkty:<section id="points">0</section></p>
         
-        <p class="timeleft">Czas:<section id="timeleft"></section> </p>
-
+        <p class="timeleft">Czas:<section id="timeleft"></section></p>
 
 
         <div class="holes">
@@ -86,7 +85,6 @@
             </div>
         </div>
     </div>
-
 
 <footer>Projekt Końcowy 2023 - Autor: laitdsgn/TR</footer>
 </main>

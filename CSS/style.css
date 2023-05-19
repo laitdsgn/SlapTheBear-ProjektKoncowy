@@ -99,9 +99,17 @@
 
 
 
- #points::selection, #timeleft::selection,  .points::selection, .timeleft::selection, #przegrana::selection {
+ #points::selection, #timeleft::selection,  .points::selection, .timeleft::selection, #przegrana::selection  {
    background-color: unset;
 }
+
+.bear img::selection {
+   background-color: unset;
+
+
+}
+
+
 
  #game {
     position: relative;
@@ -134,6 +142,10 @@
    z-index: 2;
  }
 
+ #error {
+   display: none;
+   color: #c40000;
+ }
 
  .bear {
    width: 100%;
@@ -326,9 +338,9 @@
 
    #game {
     width: 800px;
-    height: 700px;
+    height: 670px;
     background-size: cover;
-    background-position-x: -220px ;
+    background-position-x: -190px ;
    }
 
    .holes {
@@ -362,14 +374,22 @@
 
    #game {
     width: 600px;
-    height: 650px;
+    height: 640px;
     background-size: cover;
-    background-position-x: -270px ;
+    background-position-x: -263px ;
    }
 
    .holes {
       position: absolute;
       left: 8%;
+   }
+
+   #hammer {
+      display: none;
+   }
+
+   * {
+      cursor: auto;
    }
 
 
@@ -454,7 +474,24 @@
      }
 }
 
+@media only screen and (max-width: 360px) {
 
+   #error {
+      width: 100%;
+      display: block;
+      text-align: center;
+   }
+
+   #game {
+      display: none;
+   }
+
+   #start_button {
+      display: none;
+
+   }
+
+}
 
 
 

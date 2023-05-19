@@ -10,6 +10,9 @@ let minuty = Math.floor(czas / 60);
 let sekundy = czas % 60;
 let hammer = document.getElementById("hammer")
 let interval = 1200
+let fpshtml = document.getElementById("fps")
+let fps;
+const times = [];
 
 
 document.addEventListener('mousemove', hammerposition)
@@ -63,13 +66,13 @@ const misierandom = setInterval(() => {
     }, interval - 100);
 
 
-
 }, interval);
 
 
 
 
 const minutnik = setInterval(() => {
+
 
     czas--;
 
@@ -122,6 +125,8 @@ const minutnik = setInterval(() => {
     }));
 
 
+    
+
     dziury.forEach(dziura => dziura.addEventListener('click', function() {
         punktywartosc -= 10  
         punkty.innerText = punktywartosc
@@ -146,6 +151,21 @@ const minutnik = setInterval(() => {
 
 };
 
+
+// fps XDDDD 
+function obliczfps() {
+  window.requestAnimationFrame(() => {
+    const now = performance.now();
+    while (times.length > 0 && times[0] <= now - 1000) {
+      times.shift();
+    }
+    times.push(now);
+    obliczfps();
+    fps = times.length;
+    fpshtml.innerHTML = `<p id='fps'><b>FPS:</b> ${fps}</p>`
+  });
+}
+obliczfps();
 
 
 
